@@ -1,0 +1,17 @@
+syntax = "proto3";
+package org.example.modelbackend;
+
+service ImageClassifier {
+  rpc ClassifyImage (ImageRequest) returns (ImageResponse);
+}
+
+message ImageRequest {
+  bytes image_data = 1;
+}
+
+message ImageResponse {
+  string label = 1;
+  float confidence = 2;
+  bytes preprocess_data = 3;
+  bytes attention_data = 4;
+}
