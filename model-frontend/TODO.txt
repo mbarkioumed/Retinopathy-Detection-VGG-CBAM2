@@ -1,1 +1,1 @@
-Write a simple REact frontend for this app
+Write a simple React frontend for this app

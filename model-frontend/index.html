@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundus Image Retinopathy Detector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Please Upload a fundus image to view the model's predictions</h1>
+    <label for="file-upload"></label>
+    <input type="file" id="file-upload" accept="image/jpeg, image/png, image/jpg" title="Upload an image file"
+        placeholder="Choose a file">
+    <div class="image-container">
+        <div>
+            <h2>Uploaded Image :</h2>
+            <img src="" alt="" id="input-image">
+        </div>
+        <button id="submit-button">Submit</button>
+        <div>
+            <h2>Preprocessed Image :</h2>
+            <img src="" alt="" id="preprocessed-image">
+        </div>
+    </div>
+    <h2 id="label">Predicted Label : </h2>
+    <h2>Attention Maps :</h2>
+    <img src="" alt="" id="attention-maps">
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js">
+    </script>
+</body>
+
+</html>

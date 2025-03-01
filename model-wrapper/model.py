@@ -47,16 +47,16 @@ def get_model():
     num_classes = 2  # Binary classification
     model = VGGWithAttention(num_classes=num_classes).to('cpu')
 
-    # Apply dynamic quantization (same as in the saving script)
-    quantized_model_dynamic = torch.quantization.quantize_dynamic(
-        model,
-        {nn.Linear},
-        dtype=torch.qint8
-    )
+    # # Apply dynamic quantization (same as in the saving script)
+    # quantized_model_dynamic = torch.quantization.quantize_dynamic(
+    #     model,
+    #     {nn.Linear},
+    #     dtype=torch.qint8
+    # )
 
     # Load the state_dict of the dynamically quantized model
-    quantized_model_dynamic.load_state_dict(torch.load('quantized_model.pth', map_location='cpu'))
-    return quantized_model_dynamic
+    model.load_state_dict(torch.load('best_model.pth', map_location='cpu'))
+    return model
 
 
 def get_attention(attention_maps):
